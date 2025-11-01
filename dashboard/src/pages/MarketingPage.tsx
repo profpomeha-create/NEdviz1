@@ -263,7 +263,7 @@ export default function MarketingPage(){
       </div>
 
       {/* Графики */}
-      <div style={{display:'flex',gap:24,alignItems:'flex-start',marginBottom:24}}>
+      <div style={{display:'flex',gap:24,alignItems:'flex-start',marginBottom:24}} className="page-content-flex-mobile">
         {/* Круговая диаграмма маркетинговой активности */}
         <div style={{flex: 1, minWidth: 0}}>
           <h3 style={{fontSize:14,fontWeight:600,marginBottom:12,marginTop:0}}>2 Диаграмма - Маркетинговая активность:</h3>

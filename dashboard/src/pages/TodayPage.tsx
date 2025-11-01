@@ -335,7 +335,7 @@ export default function TodayPage(){
       </div>
 
       {/* Основной контент: таблицы слева и диаграммы справа */}
-      <div style={{display:'flex',gap:24,alignItems:'flex-start'}}>
+      <div style={{display:'flex',gap:24,alignItems:'flex-start'}} className="page-content-flex-mobile">
         {/* Левая часть - таблицы */}
         <div style={{flex: 1, minWidth: 0}}>
           {/* Таблица 2: Распределение по этажам */}
@@ -451,7 +451,7 @@ export default function TodayPage(){
         </div>
 
         {/* Правая часть - круговые диаграммы */}
-        <div style={{flex: '0 0 350px', display: 'flex', flexDirection: 'column', gap: 24}}>
+        <div style={{flex: '0 0 350px', display: 'flex', flexDirection: 'column', gap: 24}} className="page-sidebar-fixed-mobile">
           {/* Диаграмма 4: Доля по типам квартир */}
           <div>
             <h3 style={{fontSize:14,fontWeight:600,marginBottom:12,marginTop:0}}>4 Доля по типам квартир, %:</h3>

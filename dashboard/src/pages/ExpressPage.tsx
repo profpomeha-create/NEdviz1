@@ -429,7 +429,7 @@ export default function ExpressPage(){
       </div>
 
       {/* Графики */}
-      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
+      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}} className="charts-grid-mobile">
         {/* График 1: Цена кв.м., % */}
         {chart1Data && (
           <div className="card">

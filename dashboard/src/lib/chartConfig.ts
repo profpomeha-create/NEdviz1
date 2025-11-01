@@ -32,19 +32,28 @@ export const defaultChartOptions: ChartOptions<'line' | 'bar' | 'pie'> = {
     legend: {
       display: true,
       position: 'top',
-      labels: { color: baseColors.subtext, font: { size: 12 } },
+      labels: { 
+        color: baseColors.subtext, 
+        font: { size: 12 },
+        boxWidth: 12,
+        padding: 8,
+      },
     },
     tooltip: {
       backgroundColor: 'rgba(32,33,36,0.9)',
       padding: 12,
       cornerRadius: 4,
+      titleFont: { size: 12 },
+      bodyFont: { size: 11 },
+      titleSpacing: 4,
+      bodySpacing: 2,
     },
   },
   scales: {
     x: {
       grid: { color: baseColors.grid },
       border: { display: false },
-      ticks: { color: baseColors.subtext, font: { size: 11 } },
+      ticks: { color: baseColors.subtext, font: { size: 11 }, maxRotation: 45, minRotation: 0 },
     },
     y: {
       grid: { color: baseColors.grid },

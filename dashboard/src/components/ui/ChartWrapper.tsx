@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useMemo } from 'react';
 import { Line, Bar, Pie, Doughnut, Radar } from 'react-chartjs-2';
 import { defaultChartOptions } from '../../lib/chartConfig';
 
@@ -10,18 +10,15 @@ interface Props {
 }
 
 function ChartWrapperBase({ type, data, options, height = 280 }: Props) {
-  const merged = { 
+  const merged = useMemo(() => ({ 
     ...defaultChartOptions, 
     responsive: true,
     maintainAspectRatio: false,
     ...(options || {}) 
-  } as any;
-  
-  // Адаптивная высота через CSS, но можно задать явно для мобильных
-  const responsiveHeight = height;
+  } as any), [options]);
   
   return (
-    <div className="chart-container" style={{ height: responsiveHeight, minHeight: responsiveHeight }}>
+    <div className="chart-container" style={{ height, minHeight: height }}>
       {type === 'line' && <Line data={data} options={merged} />}
       {type === 'bar' && <Bar data={data} options={merged} />}
       {type === 'pie' && <Pie data={data} options={merged} />}

@@ -453,7 +453,7 @@ export default function WashoutPage(){
       </div>
 
       {/* Графики внизу */}
-      <div style={{display:'flex',gap:24,alignItems:'flex-start'}}>
+      <div style={{display:'flex',gap:24,alignItems:'flex-start'}} className="page-content-flex-mobile">
         {/* График динамики слева */}
         <div style={{flex: 1, minWidth: 0}}>
           <h3 style={{fontSize:14,fontWeight:600,marginBottom:12,marginTop:0}}>3 Динамика:</h3>
