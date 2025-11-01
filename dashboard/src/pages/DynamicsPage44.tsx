@@ -263,13 +263,13 @@ export default function DynamicsPage44(){
   return (
     <Layout title="4.4. Изменения средних значений за полгода помесячно в %:">
       {/* Фильтр */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end',marginBottom:16}}>
-        <div>
+      <div className="filter-container">
+        <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Жилой комплекс</label>
           <select 
             value={selectedJK ?? ''} 
             onChange={(e)=> setSelectedJK(e.target.value)} 
-            style={{padding:'6px 10px', border:'1px solid var(--color-border)', borderRadius:6, background:'#fff', minWidth:150}}
+            className="filter-select"
           >
             <option value="">Все</option>
             {(data?.projects ?? []).map((p: any)=> (
@@ -277,12 +277,12 @@ export default function DynamicsPage44(){
             ))}
           </select>
         </div>
-        <div>
+        <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Комнатность</label>
           <select 
             value={roomFilter} 
             onChange={(e)=> setRoomFilter(e.target.value as any)} 
-            style={{padding:'6px 10px', border:'1px solid var(--color-border)', borderRadius:6, background:'#fff', minWidth:120}}
+            className="filter-select"
           >
             <option value="all">Все</option>
             <option value="studio">Студия</option>
@@ -292,12 +292,12 @@ export default function DynamicsPage44(){
             <option value="4plus">4+-к</option>
           </select>
         </div>
-        <div>
+        <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Отделка</label>
           <select 
             value={finishFilter} 
             onChange={(e)=> setFinishFilter(e.target.value as any)} 
-            style={{padding:'6px 10px', border:'1px solid var(--color-border)', borderRadius:6, background:'#fff', minWidth:120}}
+            className="filter-select"
           >
             <option value="all">Все</option>
             <option value="clean">Чистовая</option>
@@ -305,12 +305,12 @@ export default function DynamicsPage44(){
             <option value="white">White box</option>
           </select>
         </div>
-        <div>
+        <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Параметр</label>
           <select 
             value={param} 
             onChange={(e)=> setParam(e.target.value as Parameter)} 
-            style={{padding:'6px 10px', border:'1px solid var(--color-border)', borderRadius:6, background:'#fff', minWidth:180}}
+            className="filter-select"
           >
             <option value="sqm">Цена кв.м., тыс. руб.</option>
             <option value="lot">Цена лота, млн. руб.</option>
@@ -318,7 +318,7 @@ export default function DynamicsPage44(){
             <option value="mortgage">Ипотечные платежи, тыс. руб.</option>
           </select>
         </div>
-        <div style={{marginLeft:'auto', display:'flex', flexDirection:'column', alignItems:'flex-end'}}>
+        <div className="filter-group" style={{marginLeft:'auto', display:'flex', flexDirection:'column', alignItems:'flex-end'}}>
           <div style={{fontSize:12,color:'var(--color-subtext)', marginBottom:4}}>
             {dateRange.start} - {dateRange.end}
           </div>

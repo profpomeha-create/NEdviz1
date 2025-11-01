@@ -249,13 +249,13 @@ export default function ForecastPage(){
   return (
     <Layout title="8. Перспектива">
       {/* Фильтры */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end',marginBottom:16}}>
-        <div>
+      <div className="filter-container">
+        <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Жилой комплекс</label>
           <select 
             value={selectedJK ?? ''} 
             onChange={(e)=> setSelectedJK(e.target.value)} 
-            style={{padding:'6px 10px', border:'1px solid var(--color-border)', borderRadius:6, background:'#fff', minWidth:150}}
+            className="filter-select"
           >
             <option value="">Все</option>
             {(data?.projects ?? []).map((p: any)=> (
@@ -263,12 +263,12 @@ export default function ForecastPage(){
             ))}
           </select>
         </div>
-        <div>
+        <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Комнатность</label>
           <select 
             value={roomFilter} 
             onChange={(e)=> setRoomFilter(e.target.value as any)} 
-            style={{padding:'6px 10px', border:'1px solid var(--color-border)', borderRadius:6, background:'#fff', minWidth:120}}
+            className="filter-select"
           >
             <option value="all">Все</option>
             {roomTypes.map(({key, label}) => (
