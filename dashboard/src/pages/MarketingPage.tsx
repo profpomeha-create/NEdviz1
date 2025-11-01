@@ -234,10 +234,10 @@ export default function MarketingPage(){
       </div>
 
       {/* Фильтры */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end',marginBottom:16}}>
+      <div className="filter-container">
         <div>
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>5 Фильтр:</label>
-          <div style={{display:'flex',gap:8}}>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
             <select 
               value={developerFilter} 
               onChange={(e)=> setDeveloperFilter(e.target.value)} 

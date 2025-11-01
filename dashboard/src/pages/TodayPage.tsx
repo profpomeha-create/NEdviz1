@@ -260,7 +260,7 @@ export default function TodayPage(){
   return (
     <Layout title="7. Сегодня в продаже">
       {/* Фильтры */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end',marginBottom:16}}>
+      <div className="filter-container">
         <div>
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Жилой комплекс</label>
           <select 

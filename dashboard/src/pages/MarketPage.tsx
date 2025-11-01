@@ -328,7 +328,7 @@ export default function MarketPage(){
   return (
     <Layout title="2. Минимальные, средние, максимальные значения: цена кв.м., цена лота, площадь лота, ипотечный платёж">
       {/* Фильтры */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end',marginBottom:16}}>
+      <div className="filter-container">
         <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Жилой комплекс</label>
           <MultiSelect

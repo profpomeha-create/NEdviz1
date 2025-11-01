@@ -317,7 +317,7 @@ export default function CompetitivePage(){
   return (
     <Layout title="5. Конкурентный анализ">
       {/* Фильтры */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end',marginBottom:16}}>
+      <div className="filter-container">
         <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Жилой комплекс</label>
           <MultiSelect

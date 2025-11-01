@@ -348,7 +348,7 @@ export default function ExpressPage(){
   return (
     <Layout title="3. Экспресс-анализ: параметры рынка сегодня, 2 и 4 недели назад">
       {/* Фильтры */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end',marginBottom:16}}>
+      <div className="filter-container">
         <div className="filter-group">
           <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>Жилой комплекс</label>
           <MultiSelect
@@ -429,7 +429,7 @@ export default function ExpressPage(){
       </div>
 
       {/* Графики */}
-      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}} className="charts-grid-mobile">
+      <div className="charts-grid-mobile">
         {/* График 1: Цена кв.м., % */}
         {chart1Data && (
           <div className="card">

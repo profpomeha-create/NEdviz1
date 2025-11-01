@@ -301,10 +301,10 @@ export default function DynamicsPage43(){
             <option value="mortgage">Ипотечные платежи, тыс. руб.</option>
           </select>
         </div>
-        <div className="filter-group" style={{marginLeft:'auto', display:'flex', flexDirection:'column', alignItems:'flex-end'}}>
-          <div style={{fontSize:12,color:'var(--color-subtext)', marginBottom:4}}>
+        <div className="filter-group">
+          <label style={{fontSize:12,color:'var(--color-subtext)', display:'block', marginBottom:4}}>
             {dateRange.start} - {dateRange.end}
-          </div>
+          </label>
           <div className="toggle" role="tablist" aria-label="Единицы" style={{marginBottom: 0}}>
             <button 
               className={`toggle-btn ${unit==='rub'?'is-active':''}`} 

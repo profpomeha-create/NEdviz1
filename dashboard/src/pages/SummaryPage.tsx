@@ -432,7 +432,7 @@ export default function SummaryPage() {
   return (
     <Layout title="1. Сводный отчёт: средние данные по локации + по каждому ЖК">
       {/* Панель фильтров - порядок как на скриншоте */}
-      <div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'flex-end', marginBottom: 16}}>
+      <div className="filter-container">
         {/* Переключатель Руб/Процент - первым */}
         <div>
           <div className="toggle" role="tablist" aria-label="Единицы" style={{marginBottom: 0}}>
